@@ -16,7 +16,7 @@ jobs:
     - run: echo "Deploying ${{ steps.generator.outputs.name }}"
     - name: Comment with link
       if: ${{ (github.event.action == 'opened' || github.event.action == 'reopened') && github.actor != 'dependabot[bot]' }}
-      uses: peter-evans/create-or-update-comment@v2
+      uses: peter-evans/create-or-update-comment@v5
       with:
         issue-number: ${{ github.event.number }}
         body: |

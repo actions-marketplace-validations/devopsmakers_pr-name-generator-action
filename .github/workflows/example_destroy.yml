@@ -19,7 +19,7 @@ jobs:
       id: generator
     - run: echo "Destroying ${{ steps.generator.outputs.name }}"
     - name: Create comment
-      uses: peter-evans/create-or-update-comment@v2
+      uses: peter-evans/create-or-update-comment@v5
       if: ${{ github.actor != 'dependabot[bot]' }}
       with:
         issue-number: ${{ github.event.number }}
